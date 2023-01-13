@@ -14,9 +14,16 @@ Our PO is asking for a new feature to implement. To do so, we need to modify an 
 
 _**As you know, that is a risky task with Legacy Code**_!
 
-To ensure we don't break any existing features, we first want to write some feature tests for our current code.
+We first want to test our current code to ensure we keep all existing features intact!
 
-We will do that by following the three steps BDD:
+We will do that by following the **_BDD Scaffolding_** technique
+
+We usually use BDD to specify and test future development. With BDD Scaffolding, we will use BDD to 
+specify and test existing LEGACY CODE!
+
+### 3 Steps of BDD 
+
+For this kata, we want to go through the below 3 steps of BDD:
 1. **Discovery**: Discuss with Domain Experts to capture rules and scenarios
 2. **Formulation**: Write Gherkin Specifications
 3. **Automation**: Automate running specifications as tests
