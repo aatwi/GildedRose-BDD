@@ -11,18 +11,18 @@ public class StepDefinitions {
     private GildedRose app;
 
     @Given("The item as {string}")
-    public void initial_sellin_is_and_quality_is(String name) {
+    public void initializeItemProperty(String name) {
         items[0] = new Item(name, 0, 0);
         app = new GildedRose(items);
     }
 
     @When("I update the quality")
-    public void i_update_the_quality() {
+    public void updateQuality() {
         app.updateQuality();
     }
 
     @Then("I should get item as {string}")
-    public void i_should_get_sellin_as_and_quality_as(String expected) {
+    public void assertItemProperties(String expected) {
         assertEquals(expected, app.items[0].name);
     }
 }
