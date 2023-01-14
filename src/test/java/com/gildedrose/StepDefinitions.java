@@ -56,5 +56,17 @@ public class StepDefinitions {
         assertEquals(itemName, app.items[0].name);
         assertEquals(expectedSellIn, app.items[0].sellIn);
     }
+
+    @Then("the quality of {string} should remain {int}")
+    public void the_quality_of_should_remain(String itemName, int expectedQuality) {
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(expectedQuality, app.items[0].quality);
+    }
+
+    @Then("the sellin date of {string} should remain in {int} days")
+    public void the_sellin_date_of_should_remain_in_days(String itemName, int expectedSellIn) {
+        assertEquals(itemName, app.items[0].name);
+        assertEquals(expectedSellIn, app.items[0].sellIn);
+    }
 }
 
