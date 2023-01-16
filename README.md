@@ -125,7 +125,7 @@ public class StepDefinitions {
 
 We provided the solution for each of the existing types of items in the below collapsable sections.
 
-Each section contains a snapshot image of the corresponding "Example Mapping" graph. And a link to a GitHub tag that includes the solution code.
+Each section contains a snapshot image of the corresponding "Example Mapping graph. And a link to a GitHub tag that includes the solution code.
 
 P.S. try to solve the problem yourself before looking at the solution.
 
@@ -153,7 +153,7 @@ View the solution code on the tag [Sulfuras](https://github.com/aatwi/GildedRose
 
 View the solution code on the tag [AgedBrie](https://github.com/aatwi/GildedRose-BDD/tree/AgedBrie).
 
-[Aged Brie](./images/ExampleMapping-AgedBrie.png)
+![Aged Brie](./images/ExampleMapping-AgedBrie.png)
 
 </details>
 
