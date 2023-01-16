@@ -27,7 +27,9 @@ For this kata, we want to go through the below 3 steps of BDD:
 1. **Discovery**: Discuss with Domain Experts to capture rules and scenarios
 2. **Formulation**: Write Gherkin Specifications
 3. **Automation**: Automate running specifications as tests
- 
+
+![3 Steps of BDD](./images/ThreeStepsOfBDD.png)
+
 ## Running This Kata 
 
 ### Discovery
@@ -119,5 +121,48 @@ public class StepDefinitions {
 }
 ```
 
-## Resources 
+## Solution 
+
+We provided the solution for each of the existing types of items in the below collapsable sections.
+
+Each section contains a snapshot image of the corresponding "Example Mapping" graph. And a link to a GitHub tag that includes the solution code.
+
+P.S. try to solve the problem yourself before looking at the solution.
+
+<details>
+<summary><b>Standard Items</b></summary>
+
+View the solution code on the tag [StandardItems](https://github.com/aatwi/GildedRose-BDD/tree/StandardItems).  
+
+![Standard Items](./images/ExampleMapping-StandardItems.png)
+
+</details>
+
+<details>
+<summary><b>Sulfuras</b></summary>
+
+View the solution code on the tag [Sulfuras](https://github.com/aatwi/GildedRose-BDD/tree/Sulfuras).
+
+![Sulfuras](./images/ExampleMapping-Sulfuras.png)
+
+</details>
+
+
+<details>
+<summary><b>Aged Brie</b></summary>
+
+View the solution code on the tag [AgedBrie](https://github.com/aatwi/GildedRose-BDD/tree/AgedBrie).
+
+[Aged Brie](./images/ExampleMapping-AgedBrie.png)
+
+</details>
+
+<details>
+<summary><b>Backstage Passes</b></summary>
+
+View the solution code on the tag [Backstage-Passes](https://github.com/aatwi/GildedRose-BDD/tree/Backstage-Passes).
+
+![Backstage Passes](./images/ExampleMapping-BackstagePasses.png)
+
+</details>
 
