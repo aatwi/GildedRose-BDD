@@ -1,7 +1,8 @@
-Feature: Gilded Rose quality
+Feature: Gilded Rose Inn
   I want to know if the quality is updated properly
 
-  Scenario: Checking foo
-    Given The item as "fixme"
-    When I update the quality
-    Then I should get item as "foo"
+  Rule: # Describe what "Business Rule" should be implemented. Use rules to group scenarios that belong to the same business rule.
+    Scenario: # Write a sentence that illustrates a concrete example of the business rule
+      Given # Write the initial context of the scenario/example
+      When # Write the event or action to be applied
+      Then # Write the expected outcome or result
