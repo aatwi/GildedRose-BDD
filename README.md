@@ -1,27 +1,36 @@
-# GildedRose BDD Scaffolding 
+# GildedRose BDD Scaffolding
 
-This Kata is based on the kata "Gilded Rose Refactoring Kata" posted by 
-[Bobby Johnson](https://github.com/NotMyself) on his GitHub account 
+This Kata is based on the kata "Gilded Rose Refactoring Kata" posted by
+[Bobby Johnson](https://github.com/NotMyself) on his GitHub account
 [here](https://github.com/NotMyself/GildedRose).
 
-[Philippe](https://github.com/philou), [Matthieu](https://github.com/mattrussa), and I are 
-extending this Kata for our talk "**_BDD Scaffolding at the Gilded Rose Inn._**" Our talk focuses 
+[Philippe](https://github.com/philou), [Matthieu](https://github.com/mattrussa), and I are
+extending this Kata for our talk "**_BDD Scaffolding at the Gilded Rose Inn._**" Our talk focuses
 on applying Behavior Driven Development to deal with legacy code.
 
 ## Description
 
-Our PO is asking for a new feature to implement. To do so, we need to modify an untested legacy code. 
+Our PO is asking us to implement a new feature in our system that supports the selling and
+buying of the new item, "Conjured Items." He also informed us that a **"Conjured" item degrades
+in Quality twice as fast as normal items**.
+
+To support this new feature, we need to modify an untested legacy code.
 
 _**As you know, that is a risky task with Legacy Code**_!
 
-We first want to test our current code to ensure we keep all existing features intact!
+To avoid introducing any regressions to our existing features, we will be following the
+**BDD Scaffolding** technique.
 
-We will do that by following the **_BDD Scaffolding_** technique
+We usually use **BDD** to specify and test future development. With **BDD Scaffolding**, we will
+use BDD to specify and test existing LEGACY CODE!
 
-We usually use BDD to specify and test future development. With BDD Scaffolding, we will use BDD to 
-specify and test existing LEGACY CODE!
+Here are the steps we will follow in this kata:
+1. We will first build scaffolding around the existing code: this will consist in creating BDD scenarios (in Gherkin language) describing the system behavior for normal items
+2. We will then automate the execution of these scenarios against our existing code.
+3. Once we are satisfied with our scaffolding, we will describe the behavior for the new feature in another scenario.
+4. We will then update our system to satisfy the new item requirement while still behaving as expected for other items.
 
-### 3 Steps of BDD 
+### 3 Steps of BDD
 
 For this kata, we want to go through the below 3 steps of BDD:
 1. **Discovery**: Discuss with Domain Experts to capture rules and scenarios
@@ -30,7 +39,7 @@ For this kata, we want to go through the below 3 steps of BDD:
 
 ![3 Steps of BDD](./images/ThreeStepsOfBDD.png)
 
-## Running This Kata 
+## Running This Kata
 
 ### Discovery
 
@@ -47,13 +56,13 @@ To better understand the application's requirements and behavior, we will use a 
 In the "Formulation" phase, we want to convert the example mapping stories into Gherkin Specifications.
 We can complete this step through developer and QA collaboration.
 
-Once completed, those Gherkin Specifications can act as living documentation and high-level 
-description of the features in the system. Along with that, using English or any other spoken 
-language, the written features can be read, understood, and written by anyone on the team and 
+Once completed, those Gherkin Specifications can act as living documentation and high-level
+description of the features in the system. Along with that, using English or any other spoken
+language, the written features can be read, understood, and written by anyone on the team and
 are not restricted to developers.
 
 
-Below is an example of a _**Feature**_ for the Standard Item in the Gilded Rose:  
+Below is an example of a _**Feature**_ for the Standard Item in the Gilded Rose:
 ```gherkin
 Feature: Gilded Rose Standard Item Quality
   The quality of Standard items degrades by 1 every day until the sellin Date
@@ -88,7 +97,7 @@ Feature: Gilded Rose Standard Item Quality
       Then "Books" should have a quality of 5
 
 ```
-### Automation 
+### Automation
 
 The third and final step is writing the Java (or another language) code to execute the features!
 
@@ -96,7 +105,7 @@ Once we complete this step, we are confident that there are tests covering the c
 
 Now, we can refactor and write new features!
 
-Below is a Java code example: 
+Below is a Java code example:
 ```java
 public class StepDefinitions {
     private Item[] items = new Item[1];
@@ -121,7 +130,7 @@ public class StepDefinitions {
 }
 ```
 
-## Solution 
+## Solution
 
 We provided the solution for each of the existing types of items in the below collapsable sections.
 
@@ -132,7 +141,7 @@ P.S. try to solve the problem yourself before looking at the solution.
 <details>
 <summary><b>Standard Items</b></summary>
 
-View the solution code on the tag [StandardItems](https://github.com/aatwi/GildedRose-BDD/tree/StandardItems).  
+View the solution code on the tag [StandardItems](https://github.com/aatwi/GildedRose-BDD/tree/StandardItems).
 
 ![Standard Items](./images/ExampleMapping-StandardItems.png)
 
