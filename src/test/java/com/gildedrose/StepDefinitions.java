@@ -10,21 +10,20 @@ public class StepDefinitions {
     private Item[] items = new Item[1];
     private GildedRose app;
 
-    private String emailAddress;
-    private boolean emailAddressIsValid = false;
-    @Given("A user enters the email address {string}")
-    public void aUserEntersTheEmailAddress(String email) {
-        this.emailAddress = email;
+    @Given("A {string} with quality {int}")
+    public void aWithQuality(String itemName, int quality) {
+        items[0] = new Item(itemName, 100, quality);
+        app = new GildedRose(items);
     }
 
-    @When("The system verifies the email address")
-    public void theSystemVerifiesTheEmailAddress() {
-        this.emailAddressIsValid = emailAddress.contains("@");
+    @When("The day passes")
+    public void theDayPasses() {
+        app.updateQuality();
     }
 
-    @Then("Email address is accepted")
-    public void assertValidityOfEmailAddress() {
-        Assertions.assertTrue(emailAddressIsValid);
+    @Then("The quality should be {int}")
+    public void theQualityShouldBe(int expectedQuality) {
+        Assertions.assertEquals(expectedQuality, items[0].quality);
     }
 }
 
